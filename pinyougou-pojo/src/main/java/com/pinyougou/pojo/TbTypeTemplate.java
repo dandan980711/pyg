@@ -1,7 +1,11 @@
 package com.pinyougou.pojo;
 
-public class TbTypeTemplate {
-    private Long id;
+import java.io.Serializable;
+
+public class TbTypeTemplate implements Serializable {
+    private static final long serialVersionUID = 8718482776875892570L;
+
+	private Long id;
 
     private String name;
 
@@ -49,5 +53,16 @@ public class TbTypeTemplate {
 
     public void setCustomAttributeItems(String customAttributeItems) {
         this.customAttributeItems = customAttributeItems == null ? null : customAttributeItems.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "TbTypeTemplate{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", specIds='" + specIds + '\'' +
+                ", brandIds='" + brandIds + '\'' +
+                ", customAttributeItems='" + customAttributeItems + '\'' +
+                '}';
     }
 }

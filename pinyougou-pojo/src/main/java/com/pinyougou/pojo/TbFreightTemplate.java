@@ -1,9 +1,12 @@
 package com.pinyougou.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbFreightTemplate {
-    private Long id;
+public class TbFreightTemplate implements Serializable {
+    private static final long serialVersionUID = 3577990800376142136L;
+
+	private Long id;
 
     private String sellerId;
 
